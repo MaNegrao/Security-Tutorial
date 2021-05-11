@@ -2,37 +2,56 @@
   <a href="https://nmap.org/">
     <img src="logo.png" alt="Logo" width=400 height=230>
   </a>
-  <h3 align="center">Guia de uso básico do NMAP</h3>
-  <p align="center">NMAP é uma ferramenta que oferece a possibilidade de realizar um scan completo em uma rede, obtendo informações sobre hosts e informações de quais portas estão abertas. Além de quais sistemas estão em execução.</p>
+  <h3 align="center">Guia de uso básico do NMAP - Linux (Ubuntu)</h3>
+  <p align="center">NMAP (Network Mapper) é uma ferramenta que oferece a possibilidade de realizar um scan completo em uma rede, obtendo informações sobre hosts e informações de quais portas estão abertas. Além de quais sistemas estão em execução.</p>
 </p>
 
 ## Indice
 
 - [Introdução](#Introdução)
-- [Status](#status)
-- [What's included](#whats-included)
+- [Diferenciais](#Diferenciais)
+- [Algumas Funcionalidades](#Algumas-Funcionalidades)
+- [Instalação](#Instalação)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
 - [Creators](#creators)
 - [Thanks](#thanks)
 - [Copyright and license](#copyright-and-license)
 
-
 ## Introdução
 
-Some text
+O Network Mapper (NMAP) é uma ferramenta gratuita open source utilizada para mapeamento de redes e auditoria de segurança das mesmas. Capaz de detectar serviços e computadores que estão conectados em rede, bem como o gerenciamento de serviços da rede, além do monitoramento de hosts. O NMAP utiliza pacotes IP como meio de determinar quais hosts estão disponivéis na rede, quais serviços os hosts estão oeferecendo e qual sistema operacioanl eles estão rodando, qual o tipo de pacote os filtros usam e inúmeras outras caracteristicas.
 
-- Instruction 1
-- Instruction 2
-- Instruction 3
+## Diferenciais
 
-## Status
+O software possui alguns diferencias que podem ser citados:
 
-Here goes all the budgets
+- Flexivel: Suporta várias técnicas avançadas de mapeamndo de rede, utilizando filtros ip, roteadores etc;
+- Portável: É possivel utilizar na maioria dos sistemas operacionais, como: Microsoft, Linux, MAC, FreeBDS, OpenBDS etc;
+- Gratuito: O programa é completamente gratuito e pode ser modificado nos termos da licença;
+- Poderoso: O NMAP pode mapear e análisar redes com centenas e até milhares de maquinas.
 
-## What's included
+Além de outros diferenciais, como sua documentação completa e os premios recebidos como melhor produto de segurança do ano pelo Linux Journal.
 
-Some text
+## Algumas Funcionalidades
+
+- Target Specification: Especificação de Alvo, podendo passar como parametro o endereço IP, redes, hostnames etc;
+- Host Descovery: Descoberta de hosts. Pode listar alvos escaneados, buscar todos os hosts ativos, traçar um caminho para cada host e outras funções;
+- Os detection: Ativa a detecção de sistemas operacionasis;
+- Timing and Performance: Comandos estipular o tempo gasto e a performace dos hosts, timeouts, etc;
+- Output: Saídas dos scans, mostrando as interfaces de hosts, rotas, pacotes, etc.
+
+## Instalação
+
+Para instalar o software no linux em distribuições baseadas no debian, como o Ubunutu 20.04 utilizado neste tutorial, basta seguir os seguintes passos:
+
+Você pode instalar utilizando o repositório base do debian utilizando o comando: 
+
+` sudo apt-get update`
+
+`sudo apt-get install nmap`
+
+Entretando, a versão do repositório
 
 ```text
 folder1/
@@ -51,17 +70,10 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://reponame/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-Moreover, all HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Main author](https://github.com/usernamemainauthor).
-
-Editor preferences are available in the [editor config](https://reponame/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
 ## Creators
 
-**Creator 1**
-
-- <https://github.com/usernamecreator1>
 
 ## Thanks
 
