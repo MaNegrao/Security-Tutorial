@@ -12,10 +12,10 @@
 - [Diferenciais](#Diferenciais)
 - [Algumas Funcionalidades](#Algumas-Funcionalidades)
 - [Instalação](#Instalação)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Contributing](#contributing)
-- [Creators](#creators)
-- [Thanks](#thanks)
+- [Utilização](#Utilização)
+- [Exemplo](#Exemplo)
+- [Conclusão](#Conclusão)
+- [Referencias](#Referencias)
 - [Copyright and license](#copyright-and-license)
 
 ## Introdução
@@ -67,34 +67,62 @@ Em seguida, rode o seguinte comando para instalar o Nmap:
 
 `sudo dpkg --install nmap-version.x86_64.deb`
 
-```text
-folder1/
-└── folder2/
-    ├── folder3/
-    │   ├── file1
-    │   └── file2
-    └── folder4/
-        ├── file3
-        └── file4
+Após realizar esses passos o nmap já estará instalado em sua máquina.
+
+## Utilização
+
+O Nmap pode ser utilizado de duas maneiras, via interface gráfica e via linha de comando. A primeia opção pode ser utilizada através da ferramenta Zenmap. Porém, este tutorial utiliza linha de comando para demonstrações.
+
+Para executar o Nmap, você deve compor uma linha de comando que irá realizar a função desejada. Todas as possibilidades de chamadas pode ser encontrada na [página guia](https://nmap.org/book/man.html#man-description) da ferramenta. A chamada base para o programa é:
+
+`nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }`
+
+A partir dessa linha, é possivel utilizar todas as funções da ferramenta na linha de comando., como por exemplo:
+
+## Exemplo
+
+`nmap -v scanme.nmap.org`
+
+Esse comando escaneia todas as portas TCP reservadas na maquina scanme.nmap.org. O -v funciona para se obter um resultado detalhado. A saída do comando é a seguinte:
+
+```
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-05-11 14:35 -03
+Initiating Ping Scan at 14:35
+Scanning scanme.nmap.org (45.33.32.156) [2 ports]
+Completed Ping Scan at 14:35, 0.20s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:35
+Completed Parallel DNS resolution of 1 host. at 14:35, 0.65s elapsed
+Initiating Connect Scan at 14:35
+Scanning scanme.nmap.org (45.33.32.156) [1000 ports]
+Discovered open port 80/tcp on 45.33.32.156
+Discovered open port 22/tcp on 45.33.32.156
+Discovered open port 9929/tcp on 45.33.32.156
+Discovered open port 31337/tcp on 45.33.32.156
+Completed Connect Scan at 14:35, 8.37s elapsed (1000 total ports)
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.20s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 993 closed ports
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+23/tcp    filtered telnet
+25/tcp    filtered smtp
+26/tcp    filtered rsftp
+80/tcp    open     http
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 9.53 seconds
 ```
 
-## Bugs and feature requests
-
-Have a bug or a feature request? Please first read the [issue guidelines](https://reponame/blob/master/CONTRIBUTING.md) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://reponame/issues/new).
-
-## Contributing
+## Conclusão
 
 
+## Referencias
 
-## Creators
+Todas as instruções utilizadas neste tutorial foram desenvolvidas com base na documentação da ferramenta disponivel no site nmap.org.
 
+## Copyright and Licença
 
-## Thanks
-
-Some Text
-
-## Copyright and license
-
-Code and documentation copyright 2011-2018 the authors. Code released under the [MIT License](https://reponame/blob/master/LICENSE).
-
-Enjoy :metal:
+Desenvolvido por Matheus Negrão, com base na documentação disponibilizados pela equipe do nmap em nmap.org. Sob a licença [MIT License](https://reponame/blob/master/LICENSE).
