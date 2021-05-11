@@ -16,7 +16,7 @@
 - [Exemplo](#Exemplo)
 - [Conclusão](#Conclusão)
 - [Referencias](#Referencias)
-- [Copyright and license](#copyright-and-license)
+- [Copyright and Licença](#Copyright-e-Licença)
 
 ## Introdução
 
@@ -77,7 +77,38 @@ Para executar o Nmap, você deve compor uma linha de comando que irá realizar a
 
 `nmap [ <Scan Type> ...] [ <Options> ] { <target specification> }`
 
-A partir dessa linha, é possivel utilizar todas as funções da ferramenta na linha de comando., como por exemplo:
+A partir dessa linha, é possivel utilizar todas as funções da ferramenta na linha de comando.
+
+Para compor o comando, você deve inserir qual tipo de scan quer fazer, quais os opcionais deseja uitilizar e qual o alvo será utilizado. Como no seguinte caso;
+
+`nmap -A -T4 scanme.nmap.org`
+
+-A é utilizado para detecção do sistema operacional e versão, scripts e a rota até o alvo. -T4 é utilizado para que a execução seja mais rápida. E porfim, scanme.nmap.org é o servidor alvo. A saída da execução é a seguinte:
+
+```
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.20s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 993 closed ports
+PORT      STATE    SERVICE    VERSION
+22/tcp    open     ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   1024 ac:00:a0:1a:82:ff:cc:55:99:dc:67:2b:34:97:6b:75 (DSA)
+|   2048 20:3d:2d:44:62:2a:b0:5a:9d:b5:b3:05:14:c2:a6:b2 (RSA)
+|   256 96:02:bb:5e:57:54:1c:4e:45:2f:56:4c:4a:24:b2:57 (ECDSA)
+|_  256 33:fa:91:0f:e0:e1:7b:1f:6d:05:a2:b0:f1:54:41:56 (ED25519)
+23/tcp    filtered telnet
+25/tcp    filtered smtp
+26/tcp    filtered rsftp
+80/tcp    open     http       Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Go ahead and ScanMe!
+9929/tcp  open     nping-echo Nping echo
+31337/tcp open     tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 20.41 seconds
+```
 
 ## Exemplo
 
@@ -118,11 +149,12 @@ Nmap done: 1 IP address (1 host up) scanned in 9.53 seconds
 
 ## Conclusão
 
+A ferramenta é completa e oferece uma ampla gama de funcionalidades. Este tutorial apresentou uma parte minima da ferramenta, apenas para demonstração e apresentação da mesma. É indicado que, para o entendimento completo da ferramenta e sua utilização segura, a documentação deve ser consultada.
 
 ## Referencias
 
 Todas as instruções utilizadas neste tutorial foram desenvolvidas com base na documentação da ferramenta disponivel no site nmap.org.
 
-## Copyright and Licença
+## Copyright e Licença
 
 Desenvolvido por Matheus Negrão, com base na documentação disponibilizados pela equipe do nmap em nmap.org. Sob a licença [MIT License](https://reponame/blob/master/LICENSE).
